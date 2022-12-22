@@ -616,10 +616,10 @@ int parent_socket_des(const char * port_number){
 
   //setting up port and address
   //char TCP_PORT_NUM = port_number;
-  // getaddrinfo("localhost",port_number,&tcp_hints,&tcp_res);
-  getaddrinfo("0.0.0.0",port_number,&tcp_hints,&tcp_res);
+  getaddrinfo("localhost",port_number,&tcp_hints,&tcp_res);
+  //getaddrinfo("0.0.0.0",port_number,&tcp_hints,&tcp_res);
   tcp_addr = socket(tcp_res->ai_family,tcp_res->ai_socktype,tcp_res->ai_protocol);
-  printf("my socket is (fd) %i\n",tcp_addr);//for debuging 
+  //printf("my socket is (fd) %i\n",tcp_addr);//for debuging 
   struct sockaddr_in *addr;
   addr = (struct sockaddr_in *)tcp_res->ai_addr;
   //intf("inet_ntoa(in_addr)sin = %s\n",inet_ntoa((struct in_addr)addr->sin_addr));//for debugging
