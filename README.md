@@ -12,7 +12,8 @@ Client Server socket for EE450
          newgrp docker
          reboot
          docker ps
-
+Status: 
+ Need to figure out what is going on... all the ports seem to right and connected and goes to serverM but not into server A... still a port issue not sure where to... need to understand the docker network more maybe... not sure if i need to specify 0.0.0.0 or /udp or /tcp.... still in work mkaing progress.
 Inside docker file
         RUN: commands are commands that run inside the image are for an immage build step (i.e. stacking layers on top of each image) 
         CMD: the command the conatiner will execute  will run on docker run
